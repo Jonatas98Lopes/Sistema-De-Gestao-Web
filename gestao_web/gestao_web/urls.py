@@ -22,4 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.pagina_inicial, name='pagina_inicial'),
     path('novo_conteudo/', views.novo_conteudo, name='novo_conteudo'),
+    path('detalhe/<int:dado_id>/', views.detalhes, name='detalhes'),
+    path('editar/<int:dado_id>/', views.editar, name='editar'),
+    path('excluir/<int:dado_id>/', views.excluir, name='excluir'),
 ]

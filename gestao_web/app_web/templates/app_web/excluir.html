@@ -1,0 +1,14 @@
+{% extends 'app_web/base.html' %}
+{% block title %}
+    <title>Exclua conteúdo aqui!</title>
+{% endblock%}
+{% block conteudo %}
+    <h1 style="text-align: center;"> Quer mesmo excluir isso?</h1>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn btn-light"><a style="color: black;" href="{% url 'pagina_inicial' %}">Cancelar</a></button>
+            <button class="btn btn-danger" type="submit">Confirmar</button>
+        </form>
+    </div>
+{% endblock%}   

@@ -1,0 +1,23 @@
+{% extends 'app_web/base.html' %}
+{% block title %}
+    <title>Veja detalhes de contéudo!</title>
+{% endblock%}
+{% block conteudo %}
+<h1 style="text-align: center;">Veja os detalhes de {{ item.nome }}</h1>
+    <div class="container">
+        <table>
+            <tr>
+                <td><h3>Id</h3></td>
+                <td><h3>Nome</h3></td>
+                <td><h3>Finalizado</h3></td>
+                <td><h3>Resenha</h3></td>
+            </tr>
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.nome }}</td>
+                <td>{{ item.finalizado }}</td>
+                <td>{{ item.resenha }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock%}
