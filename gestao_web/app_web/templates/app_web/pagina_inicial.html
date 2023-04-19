@@ -1,0 +1,22 @@
+<h1>Filmes, Séries, Animes&Desenhos</h1>
+<button><a href="{% url 'novo_conteudo'%}">Novo Conteúdo Assistido?</a></button>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Finalizado</th>
+        <th>Resenha</th>
+    </tr>
+    {% for dado in dados%}
+        <tr>
+            <td>{{dado.id}}</td>
+            <td>{{dado.nome}}</td>
+            <td>{{dado.finalizado}}</td>
+            <td>{{dado.resenha}}</td>
+            <td><button><a href="#">Detalhes</a></button></td>
+            <td><button><a href="#">Editar</a></button></td>
+            <td><button><a href="#">Excluir</a></button></td>
+        </tr>
+    {% endfor %}
+    
+</table>
