@@ -3,20 +3,26 @@
     <title>Veja detalhes de contéudo!</title>
 {% endblock%}
 {% block conteudo %}
-<h1 style="text-align: center;">Veja os detalhes de {{ item.nome }}</h1>
-    <div class="container">
-        <table>
+<div class="container">
+        <h1 style="text-align: center; margin-bottom: 20px;">Veja os detalhes de {{ item.nome }}</h1>
+        <table class="table table-dark">
             <tr>
-                <td><h3>Id</h3></td>
-                <td><h3>Nome</h3></td>
-                <td><h3>Finalizado</h3></td>
-                <td><h3>Resenha</h3></td>
+                <th scope="col" style="text-align: center;">Id</th>
+                <th scope="col" style="text-align: center;">Nome</th>
+                <th scope="col" style="text-align: center;">Finalizado</th>
+                <th scope="col" style="text-align: center;">Resenha</th>
             </tr>
             <tr>
-                <td>{{ item.id }}</td>
-                <td>{{ item.nome }}</td>
-                <td>{{ item.finalizado }}</td>
-                <td>{{ item.resenha }}</td>
+                <td style="text-align: center;">{{ item.id }}</td>
+                <td style="text-align: center;">{{ item.nome }}</td>
+                <td style="text-align: center;">
+                    {%if item.finalizado%}
+                            <input type="checkbox" checked disabled>
+                        {% else %}
+                            <input type="checkbox" disabled>
+                        {% endif %}
+                    </td>
+                <td style="text-align: justify;">{{ item.resenha }}</td>
             </tr>
         </table>
     </div>

@@ -3,10 +3,13 @@
     <title>Crie ou edite conteúdo!</title>
 {% endblock %}
 {% block conteudo %}
-    <h1>Cadastre umo novo conteúdo aqui!</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{formulario}}
-        <button type="submit">Salvar</button>
-    </form>
+{% load crispy_forms_tags %}
+    <div class="container">
+        <h1 style="text-align: center;">Cadastre um novo conteúdo aqui!</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{formulario | crispy}}
+            <button  class="btn btn-success" type="submit">Salvar</button>
+        </form>
+    </div>
 {% endblock%}
