@@ -9,7 +9,7 @@ build:
     - python manage.py migrate
     - python manage.py collectstatic --noinput
 run:
-  web: gunicorn myproject.wsgi
+  web: gunicorn gestao_web.wsgi
   backend: python manage.py run_huey
 services:
   db:
