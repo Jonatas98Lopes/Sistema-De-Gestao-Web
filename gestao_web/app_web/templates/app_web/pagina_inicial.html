@@ -6,13 +6,16 @@
     <h1 style="text-align: center;">O que gosto de assistir? - Jonatas L. de Sousa</h1>
     <div class="container">
         <button class="btn btn-success" style="margin: 10px 0 10px 0;"><a style="color: white;"href="{% url 'novo_conteudo'%}">Novo Conteúdo Assistido?</a></button>
-        <table class="table-dark">
-            <tr>
-                <th style="text-align: center; padding: 0 10px 0 10px;">Id</th>
-                <th style="text-align: center; padding: 0 10px 0 10px;">Nome</th>
-                <th style="text-align: center; padding: 0 10px 0 10px;">Finalizado</th>
-                <th style="text-align: center; padding: 0 10px 0 10px;">Resenha</th>
-            </tr>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align: center; padding: 0 10px 0 10px;">Id</th>
+                    <th scope="col" style="text-align: center; padding: 0 10px 0 10px;">Nome</th>
+                    <th scope="col" style="text-align: center; padding: 0 10px 0 10px;">Finalizado</th>
+                    <th scope="col" style="text-align: center; padding: 0 10px 0 10px;">Resenha</th>
+                </tr>
+            </thead>
+            <tbody>
             {% for dado in dados%}
                 <tr>
                     <td style="text-align: center;">{{dado.id}}</td>
@@ -30,6 +33,7 @@
                     <td><button style="margin:0 10px 0 10px;" class="btn btn-danger"><a style="color: white;" href="{% url 'excluir' dado.id %}">Excluir</a></button></td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     </div>
 {% endblock%}
