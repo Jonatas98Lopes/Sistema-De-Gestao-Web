@@ -1,0 +1,8 @@
+build:
+  - pip install -r requirements.txt
+
+env:
+  DATABASE_URL: postgres://user:password@host/dbname
+
+run:
+  web: gunicorn gestao_web.wsgi
