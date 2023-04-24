@@ -4,6 +4,7 @@ version = " 3.11.2"
 
 [build]
 command = "pip install -r requirements.txt"
+command = "python manage.py collectstatic --noinput"
 
 [run]
-command = "gunicorn gestao_web.wsgi:application --bind 127.0.0.1:8000"
+command = "python manage.py runserver 127.0.0.1:8000"
