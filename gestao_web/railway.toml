@@ -1,0 +1,9 @@
+[runtime]
+name = "python"
+version = " 3.11.2"
+
+[build]
+command = "pip install -r requirements.txt"
+
+[run]
+command = "gunicorn gestao_web.wsgi:application --bind 127.0.0.1:8000"
