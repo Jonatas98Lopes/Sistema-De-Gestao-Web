@@ -66,4 +66,10 @@ Em seguida, execute:
 pip install crispy-bootstrap5
 ```
 
+Caso queira hospedá-lo no [Railway](https://railway.app/), como eu fiz, você precisará da biblioteca gunicorn. Rode o seguinte comando no seu terminal:
+```
+pip install gunicorn
+```
+**COM O AMBIENTE VIRTUAL ATIVADO**
+
 Feito isso, você deve ser capaz de rodar o projeto.
