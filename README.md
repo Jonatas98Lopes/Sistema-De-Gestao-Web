@@ -53,23 +53,4 @@ Pronto! Seu ambiente virtual está criado e ativado.
 
 ### E agora?
 
-Precisamos de duas bibliotecas para rodar este projeto.
-
-Dentro da pasta do projeto, com o ambiente virtual criado e ativado, execute:
-```
-pip install django
-```
-
-Em seguida, execute:
-
-```
-pip install crispy-bootstrap5
-```
-
-Caso queira hospedá-lo no [Railway](https://railway.app/), como eu fiz, você precisará da biblioteca gunicorn. Rode o seguinte comando no seu terminal:
-```
-pip install gunicorn
-```
-**COM O AMBIENTE VIRTUAL ATIVADO**
-
-Feito isso, você deve ser capaz de rodar o projeto.
+Verifique as bibliotecas necessárias para rodar o projeto no arquivo _requirements.txt_ contido dentro da pasta *gestao_web*.
