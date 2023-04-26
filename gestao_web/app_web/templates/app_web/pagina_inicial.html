@@ -23,10 +23,10 @@
                         <input type="checkbox" disabled>
                     {% endif %}
                 </td>
-                <td style="text-align: justify; padding: 0 10px;width: 70%; display: inline-block;">{{ dado.resenha }}</td><br> 
+                <td style="text-align: justify;margin-bottom: 20px; padding: 0 10px;width: 70%; display: inline-block;">{{ dado.resenha }}</td><br> 
                 <td style="text-align: center; padding: 0 10px;width:33.3333%; display: inline-block;"><button class="btn btn-info"><a style="color: white;" href="{% url 'detalhes' dado.id %}">Detalhes</a></button></td>
                 <td style="text-align: center; padding: 0 10px; width:33.3333%; display: inline-block;"><button class="btn btn-warning"><a style="color: white;" href="{% url 'editar' dado.id %}">Editar</a></button></td>
-                <td style="text-align: center; padding: 0 10px; width:33.3333%; display: inline-block;"><button class="btn btn-danger"><a style="color: white;" href="{% url 'excluir' dado.id %}">Excluir</a></button></td>
+                <td style="text-align: center; padding: 0 10px; margin-bottom: 20px;width:33.3333%; display: inline-block;"><button class="btn btn-danger"><a style="color: white;" href="{% url 'excluir' dado.id %}">Excluir</a></button></td>
             </tr>
         {% endfor %}
     </table>
